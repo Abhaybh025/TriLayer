@@ -42,7 +42,7 @@ def clean_resume_text(
         return text.strip()
     
     except Exception as e:
-        logger.error("Error cleaning text: %s", e)
+        logger.exception("Error cleaning text: %s", e)
         raise
 
 def count_words(text):

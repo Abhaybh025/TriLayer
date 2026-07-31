@@ -22,7 +22,7 @@ def load_skills(path = "data/skills.csv"):
             skills_df['skill'].str.lower().str.strip()
         )
     except Exception as e:
-        logger.error("Error loading skills from CSV: %s", e)
+        logger.exception("Error loading skills from CSV")
         raise
 
 import re 
@@ -50,7 +50,7 @@ def extract_skills(text, skills_set):
         return list(extracted_skills)
     
     except Exception as e:
-        logger.error("Error extracting skills: %s", e)
+        logger.exception("Error extracting skills")
         raise
 
 

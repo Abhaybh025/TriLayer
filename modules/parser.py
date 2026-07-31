@@ -33,7 +33,7 @@ def extract_text_from_pdf(pdf_path):
         return text.strip()
     
     except Exception as e:
-        logger.error("Error extracting text from PDF: %s", e)
+        logger.exception("Error extracting text from PDF")
         raise
 
 
@@ -54,8 +54,9 @@ def extract_text_from_txt(file_path = r"data\jd.txt"):
         with open(file_path, 'r', encoding='utf-8') as file:
             text = file.read()
         return text
+    
     except Exception as e:
-        logger.error("Error extracting text from TXT file: %s", e)
+        logger.exception("Error extracting text from TXT file")
         raise
 
 def is_resume_empty(text):

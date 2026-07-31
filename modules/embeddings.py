@@ -28,8 +28,9 @@ def generate_embedding(text):
         embedding = model.encode(text)
 
         return embedding
+    
     except Exception as e:
-        logger.error("Error generating embedding: %s", e)
+        logger.exception("Error generating embedding")
         raise
     
 def semantic_similarity(resume_embeddings, jd_embeddings):

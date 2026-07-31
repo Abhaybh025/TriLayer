@@ -129,5 +129,5 @@ def ats_analysis(resume_text, matched_skills, missing_skills):
         }
 
     except Exception as e:
-        logger.error('Failed to perform ATS analysis')
+        logger.exception('Failed to perform ATS analysis')
         raise

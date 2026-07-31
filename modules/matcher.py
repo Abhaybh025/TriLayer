@@ -80,5 +80,5 @@ def analyze_resume(resume_text, jd_text, skills_set):
             "weaknesses": weaknesses
         }
     except Exception as e:
-        logger.error("Error analyzing resume: %s", e)
+        logger.exception("Error analyzing resume")
         raise
