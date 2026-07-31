@@ -3,7 +3,7 @@ import streamlit as st
 
 def render_header():
 
-    st.title("🤖 ResumeIQ")
+    st.title("🤖 TriLayer")
 
     st.caption("AI-Powered Resume Analysis Platform")
 
