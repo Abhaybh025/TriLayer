@@ -77,6 +77,7 @@ if analyze:
         "temp",
         resume.name
     )
+
     try:
 
         # saving the uploaded resume to temp folder.
@@ -153,13 +154,6 @@ if analyze:
             analysis_result=analysis,
             ats_result=ats_result
         )
-        # with st.expander("LLM Analysis"):
-
-        #     st.write("### Overall Evaluation")
-
-        #     st.write(
-        #         llm_response.overall_evaluation
-        #     )
 
         overview_tab, skills_tab, ats_tab, ai_tab = st.tabs(
             [
@@ -180,6 +174,9 @@ if analyze:
 
         with ai_tab:
             render_llm_feedback(llm_response)
+
+    except Exception:
+        st.error(f"An unexpected error occurred while analyzing the resume")
     
     finally:
         if os.path.exists(resume_path):
