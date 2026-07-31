@@ -127,8 +127,6 @@ python -m tests.test_file
 
 ## 📸 Screenshots
 
-> _Add screenshots of the dashboard here, e.g.:_
->
 > ![Upload Section](assets/overview.png)
 > ![Resume Metrices](assets/metrics.png)
 > ![Overview Tab](assets/overview_tab.png)
