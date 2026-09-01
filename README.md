@@ -1,4 +1,4 @@
-# 🎯 AI-Powered Resume Screener & ATS Analyzer
+# 🎯 TriLayer: AI-Powered Resume Screener & ATS Analyzer
 
 An intelligent resume-to-job-description matching system that parses resumes, extracts skills, scores ATS compatibility, computes semantic similarity against a job description, and generates AI-powered feedback using an LLM — all wrapped in an interactive Streamlit dashboard.
 
