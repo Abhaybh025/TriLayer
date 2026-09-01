@@ -175,9 +175,10 @@ if analyze:
         with ai_tab:
             render_llm_feedback(llm_response)
 
-    except Exception:
-        st.error(f"An unexpected error occurred while analyzing the resume")
-    
+    except Exception as e:
+        st.error(f"An unexpected error occurred while analyzing the resume: {str(e)}")
+        st.exception(e)
+
     finally:
         if os.path.exists(resume_path):
             os.remove(resume_path)
