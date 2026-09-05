@@ -40,7 +40,7 @@ class ResumeAnalysis(BaseModel):
     )
 
 llm  = ChatGroq(
-    model = "llama-3.3-70b-versatile",
+    model = "openai/gpt-oss-20b",
     temperature = 0,   
 )
 
@@ -93,6 +93,7 @@ def create_prompt():
         """
         )
 
+        logger.info("Prompt template created successfully.")
         return prompt
     
     except Exception as e:
@@ -110,6 +111,7 @@ def generate_llm_feedback(
 
     try:
         prompt = create_prompt()
+        logger.info("LLM chain created successfully.")
 
         chain = prompt | structured_llm
 
@@ -126,7 +128,7 @@ def generate_llm_feedback(
             "weaknesses" : analysis_result["weaknesses"],
             "ats_score" : ats_result["ats_score"]
         })
-
+        logger.info("LLM response received successfully.")
         return response
 
     except Exception as e:
